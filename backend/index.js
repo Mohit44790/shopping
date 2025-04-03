@@ -20,7 +20,9 @@ app.use("/api/user",userRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/upload", uploadRoutes);
-
+app.get("/", (req, res) => {
+  res.send("API is working!");
+});
 app.listen(PORT,(req,res)=>{
 
     console.log(`server running Port ${PORT}`)
